@@ -7,6 +7,7 @@ import {
   Check,
   Copy,
   Download,
+  KeyRound,
   RefreshCw,
   Settings2,
   Sparkles,
@@ -230,12 +231,6 @@ export function GeneratorPanel() {
     t,
     scoreEntriesAsync,
   ]);
-
-  // Generate the very first batch on mount so users see results immediately.
-  useEffect(() => {
-    handleGenerate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const handleRegenerateOne = useCallback(
     (id: string) => {
@@ -539,8 +534,19 @@ export function GeneratorPanel() {
         </AnimatePresence>
 
         {entries.length === 0 ? (
-          <div className="glass rounded-xl p-10 text-center text-text-secondary">
-            {t("noResults")}
+          <div className="glass rounded-xl p-10 text-center">
+            <span
+              className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-accent/30 bg-accent/10 text-accent shadow-glow-soft"
+              aria-hidden
+            >
+              <KeyRound className="h-5 w-5" />
+            </span>
+            <h4 className="mt-4 text-base font-semibold text-text-primary">
+              {t("noResultsTitle")}
+            </h4>
+            <p className="mt-1 text-sm text-text-secondary max-w-sm mx-auto">
+              {t("noResultsBody")}
+            </p>
           </div>
         ) : (
           <ul className="space-y-3" aria-live="polite">
