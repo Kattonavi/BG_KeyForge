@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "BG KeyForge — Secure & private password generator",
+    "description": "Professional generator of extremely secure passwords. Everything runs in your browser: nothing is sent, nothing is stored."
+  },
+  "nav": {
+    "brand": "BG KeyForge",
+    "generator": "Generator",
+    "howItWorks": "How it works",
+    "tips": "Security tips",
+    "privacy": "Privacy",
+    "language": "Language",
+    "es": "Español",
+    "en": "English"
+  },
+  "hero": {
+    "badge": "100% local · No server · No history",
+    "title1": "Forge passwords",
+    "title2": "impossible to guess.",
+    "subtitle": "BG KeyForge generates cryptographically secure passwords directly in your browser using the Web Crypto API. Your passwords never leave your device.",
+    "ctaGenerate": "Generate password",
+    "ctaHowItWorks": "How it works",
+    "stat1Label": "Local",
+    "stat1Value": "100%",
+    "stat2Label": "Servers that see your key",
+    "stat2Value": "0",
+    "stat3Label": "Bits of entropy per char",
+    "stat3Value": "~6.5"
+  },
+  "generator": {
+    "title": "Generator",
+    "subtitle": "Tune the parameters. Generate instantly. Copy with one click.",
+    "configTitle": "Configuration",
+    "length": "Length",
+    "quantity": "Quantity",
+    "characters": "characters",
+    "passwords": "passwords",
+    "types": "Character types",
+    "uppercase": "Uppercase (A-Z)",
+    "lowercase": "Lowercase (a-z)",
+    "numbers": "Numbers (0-9)",
+    "symbols": "Symbols (!@#$...)",
+    "advanced": "Advanced options",
+    "excludeAmbiguous": "Exclude ambiguous characters",
+    "excludeAmbiguousHint": "Removes O, 0, I, l and 1",
+    "avoidProblematic": "Avoid problematic symbols",
+    "avoidProblematicHint": "Removes quotes, spaces and slashes",
+    "requireEachType": "Require at least one of each type",
+    "maxSecurity": "Maximum security mode",
+    "maxSecurityHint": "Length 128, all types, no ambiguity",
+    "easyRead": "Easy-to-read mode",
+    "easyReadHint": "Avoids ambiguity and problematic symbols",
+    "generate": "Generate",
+    "regenerate": "Regenerate",
+    "results": "Results",
+    "noResults": "No passwords generated yet. Press Generate.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyAll": "Copy all",
+    "export": "Export .txt",
+    "regenerateOne": "Regenerate this one",
+    "clear": "Clear",
+    "show": "Show",
+    "hide": "Hide",
+    "passwordHiddenA11y": "Password hidden. Press Show to reveal it.",
+    "close": "Close",
+    "strength": "Strength",
+    "chars": "{count} characters",
+    "exportWarningTitle": "Before exporting",
+    "exportWarningBody": "An unencrypted .txt file is vulnerable. Save it in a secure location, transfer it into a password manager and then delete it permanently.",
+    "exportCancel": "Cancel",
+    "exportConfirm": "I understand, download",
+    "errorNoTypes": "Select at least one character type.",
+    "errorLength": "Length is smaller than the required types. It was adjusted automatically.",
+    "strengthLabels": {
+      "0": "Very weak",
+      "1": "Weak",
+      "2": "Fair",
+      "3": "Strong",
+      "4": "Very strong"
+    }
+  },
+  "how": {
+    "title": "How it works",
+    "subtitle": "Total transparency. No magic, no servers, no tricks.",
+    "step1Title": "Local generation",
+    "step1Body": "Everything happens in your browser. When you press Generate, BG KeyForge calls the Web Crypto API (crypto.getRandomValues), a cryptographically secure source available in every modern browser.",
+    "step2Title": "Unbiased selection",
+    "step2Body": "We use rejection sampling: random values that would produce bias when mapped to the alphabet are discarded. Every character in the alphabet has exactly the same probability.",
+    "step3Title": "Secure shuffle",
+    "step3Body": "When you require at least one character of each type, we shuffle the result with a Fisher-Yates fed by crypto.getRandomValues. No predictable patterns at the beginning.",
+    "step4Title": "Zero traces",
+    "step4Body": "Passwords never reach an endpoint. We don't use localStorage, cookies, logs or analytics that can see them. Refresh the page and they cease to exist."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "subtitle": "What we DON'T do matters as much as what we do.",
+    "items": {
+      "noSave": "We don't save your passwords anywhere.",
+      "noSee": "We can't see them: they never reach a server.",
+      "noSend": "They are not sent over the internet, ever.",
+      "noDb": "We don't use a database: there's nothing to leak.",
+      "noAccount": "No account, registration or email required.",
+      "noHistory": "We don't record history or generation telemetry."
+    },
+    "footnote": "You can verify this by going offline: the generator still works exactly the same."
+  },
+  "tips": {
+    "title": "Digital security tips",
+    "subtitle": "A great password is only the first step.",
+    "items": {
+      "manager": {
+        "title": "Use a password manager",
+        "body": "A manager remembers long, unique passwords for you, autofills them and encrypts them with a master key."
+      },
+      "noReuse": {
+        "title": "Don't reuse passwords",
+        "body": "If a site is breached, every account sharing that password is exposed. One unique password per service."
+      },
+      "twoFactor": {
+        "title": "Enable two-factor authentication",
+        "body": "Prefer TOTP apps (Authy, 1Password, Aegis) or hardware security keys (FIDO2) over SMS."
+      },
+      "passkeys": {
+        "title": "Use passkeys whenever you can",
+        "body": "Passkeys replace passwords with public-key cryptography: nothing to remember, nothing to phish."
+      },
+      "noShare": {
+        "title": "Don't share them via chat or email",
+        "body": "Those channels are often archived in plaintext. Use the secure sharing feature of your password manager."
+      },
+      "noPlain": {
+        "title": "Don't store them in unencrypted files",
+        "body": "A .txt, Notes app or open Word doc is an easy target. If you must store them, encrypt the file or use a manager."
+      },
+      "rotate": {
+        "title": "Rotate leaked passwords",
+        "body": "Check haveibeenpwned.com with your email. If any appeared in a breach, regenerate it here and change it now."
+      },
+      "update": {
+        "title": "Keep your browser and OS updated",
+        "body": "Browser vulnerabilities can expose any data. Enable automatic updates."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "save": {
+        "q": "Does BG KeyForge save my passwords?",
+        "a": "No. There's no database, no localStorage, no cookies that hold them. They exist only in this tab's memory while you keep it open."
+      },
+      "sent": {
+        "q": "Are passwords sent over the internet?",
+        "a": "Never. Generation happens entirely in your browser via the Web Crypto API. You can disconnect from the internet and verify it."
+      },
+      "length": {
+        "q": "Why 100 characters by default?",
+        "a": "For critical services that accept long passwords (managers, email, banking), 100 characters provide a huge margin against brute force. For sites with limits, lower the value."
+      },
+      "txt": {
+        "q": "Is exporting to .txt safe?",
+        "a": "Only if you understand the risks. A .txt file is not encrypted. Use it as a temporary step to move keys into a manager and then securely delete it."
+      },
+      "any": {
+        "q": "Can I use these passwords in any account?",
+        "a": "Yes, although some services limit length or certain symbols. If a password is rejected, try a shorter length or enable 'Avoid problematic symbols'."
+      },
+      "noSymbols": {
+        "q": "What if a site doesn't accept symbols?",
+        "a": "Disable symbols and increase the length (e.g. 32+). With enough letters and numbers you keep very high entropy."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Forged with open cryptography. Built for your privacy.",
+    "rights": "© {year} BG KeyForge. No servers, no accounts, no compromises."
+  }
+}

@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary antialiased;
+    background-image:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(56, 189, 248, 0.12),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 110%,
+        rgba(34, 211, 238, 0.08),
+        transparent
+      );
+    background-attachment: fixed;
+    background-color: #050816;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-text-primary;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-bg-card/60 backdrop-blur-xl border border-bg-border/80;
+  }
+
+  .glass-soft {
+    @apply bg-bg-card/40 backdrop-blur-md border border-bg-border/60;
+  }
+
+  .glow-ring {
+    @apply ring-1 ring-accent/20 shadow-glow-soft;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(31, 41, 55, 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 41, 55, 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(
+      ellipse at center,
+      black 30%,
+      transparent 75%
+    );
+  }
+}
+
+.font-mono-tight {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  letter-spacing: -0.01em;
+}
+
+/* Hide scrollbars while still allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

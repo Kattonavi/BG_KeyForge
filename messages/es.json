@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "BG KeyForge — Generador de contraseñas seguro y privado",
+    "description": "Generador profesional de contraseñas extremadamente seguras. Todo se ejecuta en tu navegador: nada se envía, nada se guarda."
+  },
+  "nav": {
+    "brand": "BG KeyForge",
+    "generator": "Generador",
+    "howItWorks": "Cómo funciona",
+    "tips": "Consejos de seguridad",
+    "privacy": "Privacidad",
+    "language": "Idioma",
+    "es": "Español",
+    "en": "English"
+  },
+  "hero": {
+    "badge": "100% local · Sin servidor · Sin historial",
+    "title1": "Forja contraseñas",
+    "title2": "imposibles de adivinar.",
+    "subtitle": "BG KeyForge genera contraseñas criptográficamente seguras directamente en tu navegador usando la Web Crypto API. Tus contraseñas nunca salen de tu dispositivo.",
+    "ctaGenerate": "Generar contraseña",
+    "ctaHowItWorks": "Cómo funciona",
+    "stat1Label": "Local",
+    "stat1Value": "100%",
+    "stat2Label": "Servidores que ven tu clave",
+    "stat2Value": "0",
+    "stat3Label": "Bits de entropía por carácter",
+    "stat3Value": "~6.5"
+  },
+  "generator": {
+    "title": "Generador",
+    "subtitle": "Ajusta los parámetros. Genera al instante. Copia con un clic.",
+    "configTitle": "Configuración",
+    "length": "Longitud",
+    "quantity": "Cantidad",
+    "characters": "caracteres",
+    "passwords": "contraseñas",
+    "types": "Tipos de caracteres",
+    "uppercase": "Mayúsculas (A-Z)",
+    "lowercase": "Minúsculas (a-z)",
+    "numbers": "Números (0-9)",
+    "symbols": "Símbolos (!@#$...)",
+    "advanced": "Opciones avanzadas",
+    "excludeAmbiguous": "Excluir caracteres ambiguos",
+    "excludeAmbiguousHint": "Quita O, 0, I, l y 1",
+    "avoidProblematic": "Evitar símbolos problemáticos",
+    "avoidProblematicHint": "Quita comillas, espacios y barras",
+    "requireEachType": "Garantizar al menos uno de cada tipo",
+    "maxSecurity": "Modo máxima seguridad",
+    "maxSecurityHint": "Longitud 128, todos los tipos, sin ambigüedad",
+    "easyRead": "Modo fácil de leer",
+    "easyReadHint": "Evita ambigüedad y símbolos problemáticos",
+    "generate": "Generar",
+    "regenerate": "Regenerar",
+    "results": "Resultados",
+    "noResults": "Aún no has generado contraseñas. Pulsa Generar.",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "copyAll": "Copiar todas",
+    "export": "Exportar .txt",
+    "regenerateOne": "Regenerar esta",
+    "clear": "Limpiar",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "passwordHiddenA11y": "Contraseña oculta. Pulsa Mostrar para revelarla.",
+    "close": "Cerrar",
+    "strength": "Fuerza",
+    "chars": "{count} caracteres",
+    "exportWarningTitle": "Antes de exportar",
+    "exportWarningBody": "Un archivo .txt sin cifrar es vulnerable. Guárdalo en una ubicación segura, transfiérelo a un gestor de contraseñas y luego elimínalo de forma definitiva.",
+    "exportCancel": "Cancelar",
+    "exportConfirm": "Entiendo, descargar",
+    "errorNoTypes": "Selecciona al menos un tipo de carácter.",
+    "errorLength": "La longitud es menor que los tipos requeridos. Se ajustó automáticamente.",
+    "strengthLabels": {
+      "0": "Muy débil",
+      "1": "Débil",
+      "2": "Aceptable",
+      "3": "Fuerte",
+      "4": "Muy fuerte"
+    }
+  },
+  "how": {
+    "title": "Cómo funciona",
+    "subtitle": "Transparencia total. Sin magia, sin servidores, sin trampas.",
+    "step1Title": "Generación local",
+    "step1Body": "Todo ocurre en tu navegador. Cuando pulsas Generar, BG KeyForge llama a la Web Crypto API (crypto.getRandomValues), una fuente criptográficamente segura disponible en cada navegador moderno.",
+    "step2Title": "Selección sin sesgo",
+    "step2Body": "Usamos rejection sampling: descartamos los valores aleatorios que producirían sesgo al mapearlos al alfabeto. Cada carácter del alfabeto tiene exactamente la misma probabilidad.",
+    "step3Title": "Mezcla segura",
+    "step3Body": "Cuando exiges al menos un carácter de cada tipo, mezclamos el resultado con un Fisher-Yates alimentado por crypto.getRandomValues. Sin patrones predecibles al inicio.",
+    "step4Title": "Cero rastros",
+    "step4Body": "Las contraseñas nunca van a un endpoint. No usamos localStorage, cookies, logs ni analíticas que las puedan ver. Cuando refrescas la página, dejan de existir."
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "subtitle": "Lo que NO hacemos importa tanto como lo que sí hacemos.",
+    "items": {
+      "noSave": "No guardamos tus contraseñas en ningún lugar.",
+      "noSee": "No podemos verlas: nunca llegan a un servidor.",
+      "noSend": "No se envían a internet bajo ninguna circunstancia.",
+      "noDb": "No usamos base de datos: no hay nada que filtrar.",
+      "noAccount": "No necesitas cuenta, registro ni correo.",
+      "noHistory": "No registramos historial ni telemetría de generación."
+    },
+    "footnote": "Puedes verificarlo desactivando tu conexión: el generador sigue funcionando exactamente igual."
+  },
+  "tips": {
+    "title": "Consejos de seguridad digital",
+    "subtitle": "Una gran contraseña es solo el primer paso.",
+    "items": {
+      "manager": {
+        "title": "Usa un gestor de contraseñas",
+        "body": "Un gestor recuerda contraseñas largas y únicas por ti, las completa automáticamente y las cifra con una clave maestra."
+      },
+      "noReuse": {
+        "title": "No reutilices contraseñas",
+        "body": "Si un sitio sufre una brecha, todas tus cuentas con la misma clave quedan expuestas. Una contraseña distinta por servicio."
+      },
+      "twoFactor": {
+        "title": "Activa autenticación en dos pasos",
+        "body": "Prefiere apps TOTP (Authy, 1Password, Aegis) o llaves de seguridad físicas (FIDO2) sobre SMS."
+      },
+      "passkeys": {
+        "title": "Usa passkeys cuando puedas",
+        "body": "Las passkeys reemplazan la contraseña con criptografía de clave pública: nada que recordar, nada que phishear."
+      },
+      "noShare": {
+        "title": "No las compartas por chat o correo",
+        "body": "Esos canales suelen quedar archivados sin cifrar. Usa el compartir seguro de tu gestor de contraseñas."
+      },
+      "noPlain": {
+        "title": "No las guardes en archivos sin cifrar",
+        "body": "Un .txt, Notas o un Word abierto es un blanco fácil. Si necesitas guardarlas, cifra el archivo o usa un gestor."
+      },
+      "rotate": {
+        "title": "Cambia las contraseñas filtradas",
+        "body": "Consulta haveibeenpwned.com con tu correo. Si alguna apareció en una brecha, regénerala aquí y cámbiala ya."
+      },
+      "update": {
+        "title": "Mantén navegador y sistema actualizados",
+        "body": "Las vulnerabilidades del navegador pueden exponer cualquier dato. Activa las actualizaciones automáticas."
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": {
+      "save": {
+        "q": "¿BG KeyForge guarda mis contraseñas?",
+        "a": "No. No hay base de datos, ni localStorage, ni cookies que las contengan. Existen únicamente en la memoria de esta pestaña mientras la tengas abierta."
+      },
+      "sent": {
+        "q": "¿Las contraseñas se envían a internet?",
+        "a": "Nunca. La generación se hace por completo en tu navegador con la Web Crypto API. Puedes desconectarte de internet y comprobarlo."
+      },
+      "length": {
+        "q": "¿Por qué 100 caracteres por defecto?",
+        "a": "Para servicios críticos que aceptan longitudes grandes (gestores, correo, banca), 100 caracteres ofrecen un margen enorme frente a fuerza bruta. Para sitios con límite, baja el valor."
+      },
+      "txt": {
+        "q": "¿Es seguro exportar en .txt?",
+        "a": "Solo si entiendes los riesgos. Un .txt no está cifrado. Úsalo como paso temporal para mover claves a un gestor y luego elimínalo de forma segura."
+      },
+      "any": {
+        "q": "¿Puedo usar estas contraseñas en cualquier cuenta?",
+        "a": "Sí, aunque algunos servicios limitan longitud o ciertos símbolos. Si te rechazan una clave, prueba con menos longitud o activa 'Evitar símbolos problemáticos'."
+      },
+      "noSymbols": {
+        "q": "¿Qué hago si una página no acepta símbolos?",
+        "a": "Desactiva los símbolos y aumenta la longitud (por ejemplo 32+). Con suficientes letras y números mantienes una entropía altísima."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Forjado con criptografía abierta. Hecho para tu privacidad.",
+    "rights": "© {year} BG KeyForge. Sin servidores, sin cuentas, sin compromisos."
+  }
+}
